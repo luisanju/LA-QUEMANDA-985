@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi Radio Online</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#1e1e1e,#000);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.radio{
+    text-align:center;
+    background:#111;
+    padding:40px;
+    border-radius:15px;
+    width:320px;
+    box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
+
+h1{
+    margin-bottom:10px;
+}
+
+button{
+    background:#ff3b3b;
+    border:none;
+    color:white;
+    padding:12px 25px;
+    font-size:16px;
+    border-radius:30px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#ff0000;
+}
+</style>
+</head>
+
+<body>
+
+<div class="radio">
+<h1>📻 Mi Radio</h1>
+<p>En vivo 24/7</p>
+
+<audio id="player">
+<source src="https://TU-STREAM-AQUI" type="audio/mpeg">
+</audio>
+
+<button onclick="playRadio()">▶ Escuchar</button>
+<button onclick="stopRadio()">⏹ Parar</button>
+
+</div>
+
+<script>
+let radio = document.getElementById("player");
+
+function playRadio(){
+radio.play();
+}
+
+function stopRadio(){
+radio.pause();
+}
+</script>
+
+</body>
+</html>
