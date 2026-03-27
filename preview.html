@@ -1,77 +1,54 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mi Radio Online</title>
-
-<style>
-body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:linear-gradient(135deg,#1e1e1e,#000);
-    color:white;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-}
-
-.radio{
-    text-align:center;
-    background:#111;
-    padding:40px;
-    border-radius:15px;
-    width:320px;
-    box-shadow:0 0 20px rgba(0,0,0,0.5);
-}
-
-h1{
-    margin-bottom:10px;
-}
-
-button{
-    background:#ff3b3b;
-    border:none;
-    color:white;
-    padding:12px 25px;
-    font-size:16px;
-    border-radius:30px;
-    cursor:pointer;
-}
-
-button:hover{
-    background:#ff0000;
-}
-</style>
+  <meta charset="UTF-8">
+  <title>La Que Manda 98.5</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: #111;
+      color: white;
+      text-align: center;
+    }
+    header {
+      background: #e60000;
+      padding: 15px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .player {
+      margin-top: 40px;
+    }
+    button {
+      background: #e60000;
+      border: none;
+      padding: 15px 30px;
+      color: white;
+      font-size: 18px;
+      border-radius: 10px;
+    }
+    footer {
+      margin-top: 50px;
+      font-size: 14px;
+      opacity: 0.7;
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="radio">
-<h1>📻 Mi Radio</h1>
-<p>En vivo 24/7</p>
+<header>
+  🔊 Full Party Radio
+</header>
 
-<audio id="player">
-<source src="https://TU-STREAM-AQUI" type="audio/mpeg">
-</audio>
-
-<button onclick="playRadio()">▶ Escuchar</button>
-<button onclick="stopRadio()">⏹ Parar</button>
-
+<div class="player">
+  <audio id="radio" src="https://radios.yanapak.org/laquemanda985" preload="none"></audio>
+  <br><br>
+  <button onclick="togglePlay()">▶️ Play / Stop</button>
 </div>
 
-<script>
-let radio = document.getElementById("player");
-
-function playRadio(){
-radio.play();
-}
-
-function stopRadio(){
-radio.pause();
-}
-</script>
-
-</body>
-</html>
+<footer>
+  © 2026 - DJ Luis Antonio
+</footer>
